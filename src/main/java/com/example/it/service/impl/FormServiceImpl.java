@@ -68,7 +68,7 @@ public class FormServiceImpl implements FormService {
         for(Form item: formList){
             if(item.getMusicType().equals("Pop")){
                 popNumber += 1;
-            }else if(item.getMusicType().equals("Clasica")){
+            }else if(item.getMusicType().equals("Classic")){
                 classicNumber +=1;
             }
             else if(item.getMusicType().equals("Jazz")){

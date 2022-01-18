@@ -1,9 +1,7 @@
 package com.example.it.dao.data.form;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -12,6 +10,8 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class FormRequest {
 
     @ApiModelProperty(value = "nombre del usuario", required = true, position = 1)
@@ -20,7 +20,6 @@ public class FormRequest {
     String name;
 
     @ApiModelProperty(value = "Email del usurio", required = true, position = 2)
-    @NotBlank(message = "El email no puede ser vacio")
     @Email(message = "El campo debe ser un email valido")
     @Size(min = 1, max = 50, message = "El email debe tener entre 1 y 50 caracteres")
     String email;
